@@ -1,0 +1,110 @@
+    1  cd djangogirls
+    2  source blog/bin/activate
+    3  cd bloger
+    4  cd blog
+    5  touch url.py
+    6  cd ..
+    7  ls
+    8  python manage.py runserver
+    9  mkdir static
+   10  cd static
+   11  mkdir css
+   12  cd css
+   13  touch blog.css
+   14  python3 manage.py runserver
+   15  cd ..
+   16  source blog/bin/activate
+   17  cd bloger
+   18  ls
+   19  python manage.py runserver
+   20  cd blog
+   21  mkdir templates
+   22  cd templates
+   23  mkdir blog
+   24  cd blog
+   25  touch post_list.html
+   26  cd ..
+   27  git status
+   28  git add --all
+   29  cd ..
+   30  git status
+   31  cd bloger
+   32  git commit -m "Changed the HTML for the site"
+   33  git push
+   34  git status
+   35  git add --all
+   36  git push
+   37  git commit -m "Modifed templated to display posts from database."
+   38  git push
+   39  cd ..
+   40  cd blog
+   41  mkdir static
+   42  cd static
+   43  mkdir css
+   44  cd css
+   45  touch blog.css
+   46  cd ..
+   47  python shell
+   48  python3 shell
+   49  python3
+   50  sudo docker run --name 'mtproto_proxy' --restart unless-stopped -p 1984:1984 -dti dotcypress/mtproxy -s 'proxy zhoskii'
+   51  sudo apt-get install docker
+   52  sudo docker run --name 'mtproto_proxy' --restart unless-stopped -p 1984:1984 -dti dotcypress/mtproxy -s 'proxy zhoskii'
+   53  sudo curl -sSL https://get.docker.com/ | sh
+   54  sudo apt-get update && apt-get upgrade
+   55  sudo apt-get install docker.io
+   56  sudo docker run --name 'mtproto_proxy' --restart unless-stopped -p 1984:1984 -dti dotcypress/mtproxy -s 'proxy zhoskii'
+   57  docker logs mtproto_proxy
+   58  sudo -i
+   59  sudo docker run --name 'mtproto_proxy' --restart unless-stopped -p 1984:1984 -dti dotcypress/mtproxy -s 'proxy secret'
+   60  sudo -i
+   61  mkdir templates
+   62  cd templates/
+   63  mkdir my_portfolio
+   64  cd my_portfolio/
+   65  touch main_menu.html
+   66  sudo apt-get update telegram
+   67  sudo apt-get update 
+   68  sudo apt purge telegram
+   69  sudo apt purge telegramm
+   70  python3
+   71  cd lesson1
+   72  docker run -it --rm gcc bash
+   73  /..
+   74  ../
+   75  rem lesson1
+   76  mkdir week1
+   77  cd week1
+   78  cd ../
+   79  usr
+   80  cd usr
+   81  ls | sort -r | /usr/bin
+   82  ls | sort -r | /usr/bin/gcc
+   83  ls | sort -r | /usr/bin gcc
+   84  ls | sort -r | /usr/bin gcc > ex1.txt
+   85  ls /usr/bin
+   86  ls | sort -r | grep gcc /usr/bin
+   87  ls | sort -r | grep gcc /usr/bin > ex1.txt
+   88  grep gcc usr/bin
+   89  grep gcc /usr/bin
+   90  ls /usr/bin
+   91  ls /usr/bin grep gcc
+   92  grep gcc /usr/bin
+   93  cd week1/
+   94  ls /usr/bin | sort -r | grep 'gcc'
+   95  ls /usr/bin | sort -r | grep 'gcc' > ex1.txt
+   96  head ex1.txt
+   97  ls /usr/bin | sort -r  grep 'gcc' > ex1.txt
+   98  ls /usr/bin | sort -r grep 'gcc' > ex1.txt
+   99  ls /usr/bin | sort -r
+  100  ls /usr/bin | sort -r | grep 'gcc'
+  101  ls /usr/bin | sort -r | grep "gcc"
+  102  ls /usr/bin | sort -r | grep "gcc" /usr/bin
+  103  ls /usr/bin | sort -r | grep 'gcc'
+  104  ls /usr/bin
+  105  sudo apt-get install gcc
+  106  docker run -it --rm gcc bash
+  107  ls /usr/bin | sort -r | grep 'gcc'
+  108  ls /usr/bin | sort -r | grep 'gcc' > ex1.txt
+  109  history
+  110  history > ex2.txt
