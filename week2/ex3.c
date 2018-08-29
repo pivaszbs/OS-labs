@@ -64,8 +64,8 @@ void figure3(int n)
 int main(int argc, char const *argv[])
 {
 	int n, m;
-	scanf("%d", &n);
-	scanf("%d", &m);
+	sscanf(argv[1], "%d", &n);
+	sscanf(argv[2], "%d", &m);
 	switch (m)
 	{
 		case 1:
