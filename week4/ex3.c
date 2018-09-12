@@ -11,7 +11,6 @@ int checker(char* string)
 
 int main(int argc, char const *argv[])
 {
-	FILE *fp;
 	char *command = malloc(sizeof(char)*1024);
 	while (1)
 	{
