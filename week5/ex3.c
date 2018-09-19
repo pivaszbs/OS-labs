@@ -37,8 +37,7 @@ void* producer(void* arg)
 	while (TRUE) 
 	{
 		if (count == N) sleep_prog();
-		count++;
-		printf("%d\n", count);
+		count++;	
 		if (count == 1) wakeup(consumer);
 	}
 }
@@ -50,7 +49,6 @@ void* consumer(void* arg)
 	{
 		if (count == 0) sleep_prog();
 		count--;
-		printf("%d\n", count);
 		if (count == N-1) wakeup(producer);
 	}
 }
@@ -59,11 +57,12 @@ int main(int argc, char const *argv[])
 {
 	pthread_t prod;
 	pthread_t cons;
+	pthread_create(&prod, NULL, producer, NULL);
 	pthread_create(&cons, NULL, consumer, NULL);
 	while(1)
 	{
 		printf("%d\n", count);
-		sleep(1);
+		sleep(60);
 	}	
 	pthread_join(cons, NULL);
 	return 0;
