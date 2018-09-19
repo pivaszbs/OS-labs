@@ -17,6 +17,7 @@ int main(int argc, char const *argv[])
 		x = i;
 		pthread_t thread;
 		pthread_create(&thread, NULL, print_something, &x);
+		pthread_join(thread, NULL);
 	}
 	return 0;
 }
