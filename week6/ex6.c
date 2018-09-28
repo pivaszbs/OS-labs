@@ -5,6 +5,8 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 
+int status = 0;
+
 int main(int argc, char const *argv[])
 {
 	pid_t child_pid[2] = {}	;
@@ -14,7 +16,8 @@ int main(int argc, char const *argv[])
 	{
 		close(fd[1]);
 		read(fd[1], &child_pid[1], sizeof(child_pid[1]));
-		kill(child_pid[1], SIGKILL);
+		sleep(10);
+		kill(child_pid[1], SIGSTOP);
 	}
 	else
 	{
@@ -27,7 +30,7 @@ int main(int argc, char const *argv[])
 		{
 			close(fd[0]);
 			write(fd[0], &child_pid[1], sizeof(child_pid[1]));
-			wait(NULL);
+			waitpid(child_pid[1], &status, 0);
 		}
 	}
 	return 0;
