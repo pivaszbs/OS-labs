@@ -59,7 +59,7 @@ void insert_page(page_t* a, int page_frame, int page_num)
 
 int main(int argc, char const *argv[])
 {
-	char* filename = "ex2.txt";
+	char* filename = "ex2-1.txt";
 	int page_frame = atoi(argv[1]);
 	page_t* page_list = malloc(page_frame*sizeof(page_t));
 	FILE* input_file;

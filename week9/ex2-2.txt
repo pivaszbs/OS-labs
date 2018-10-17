@@ -1,0 +1,4 @@
+2.200000
+2.200000
+2.200000
+So if we sort the pages in descending or ascending order, the size of the page frame will not matter and hitrate will be maximum (we load the page once, use it many times).
