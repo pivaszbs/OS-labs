@@ -3,12 +3,12 @@
 
 #define true 1
 #define false 0
-
+#define filename "Lab 09 input.txt"
 
 struct a
 {
-	int page_num;
-	int page_age;
+	unsigned int page_num;
+	unsigned int page_age;
 	int R;
 	int M;
 	//And so on...
@@ -17,7 +17,10 @@ struct a
 void update_age(page_t* a, int referenced_a)
 {
 	for (int i = 0; i < referenced_a; ++i)
-		a[i].page_age += 1<<31;
+	{
+		a[i].page_age >>= 1;
+		a[i].page_age += 1<<31;		
+	}
 }
 
 int check_page_in_table(page_t* a, int page_frame, int page_num)
@@ -59,7 +62,6 @@ void insert_page(page_t* a, int page_frame, int page_num)
 
 int main(int argc, char const *argv[])
 {
-	char* filename = "ex2-1.txt";
 	int page_frame = atoi(argv[1]);
 	page_t* page_list = malloc(page_frame*sizeof(page_t));
 	FILE* input_file;
@@ -87,6 +89,7 @@ int main(int argc, char const *argv[])
 	int referenced_a = 0;
 	for (int i = 0; i < k; ++i)
 	{
+		update_age(page_list, referenced_a);
 		if (check_page_in_table(page_list, page_frame, c[i]))
 		{
 			hit++;
@@ -96,7 +99,6 @@ int main(int argc, char const *argv[])
 		insert_page(page_list, page_frame, c[i]);
 		if (referenced_a < page_frame)
 			referenced_a++;
-		update_age(page_list, referenced_a);
 	}
 	double result = 1.0*hit/miss;
 	printf("%f\n", result);
