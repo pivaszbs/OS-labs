@@ -1,0 +1,1 @@
+In a situation where we will use virtual memory on machines designed only for embedded programs, we will lose efficiency due to the storage of the page table and the translating from the virtual address to the physical. So the w/o virtual memory on embeeded machines we will reduce their cost (hardware suport facilitation), and improve performance.
