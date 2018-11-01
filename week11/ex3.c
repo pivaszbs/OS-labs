@@ -1,9 +1,17 @@
 #include <stdio.h>
-#include <unistd.h>
-int main(void) {	
-	printf("Hello world\n");
-	sleep(10);
+#include <unistd.h> 
+int main(void) {
+	printf("Hello");
 	fork();
 	printf("\n");
 	return 0;
 }
+
+/*#include <stdio.h>
+#include <unistd.h>
+int main(void) {
+	printf("Hello");
+	fork();
+	printf("\n");
+	return 0;
+}*/

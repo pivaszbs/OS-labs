@@ -2,15 +2,15 @@
 #include <unistd.h>
 int main(int argc, char const *argv[])
 {
-	printf("Hello");
+	printf("H");
 	sleep(1);
-	printf("Hello");
+	printf("e");
 	sleep(1);
-	printf("Hello");
+	printf("l");
 	sleep(1);
-	printf("Hello");
+	printf("l");
 	sleep(1);
-	printf("Hello");
+	printf("o");
 	sleep(1);
 	return 0;
 }

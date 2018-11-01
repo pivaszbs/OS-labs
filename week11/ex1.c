@@ -3,7 +3,7 @@
 #include <fcntl.h>
 #include <sys/mman.h>
 #include <string.h>
-
+#include <unistd.h>
 #define MAGIC_PHRASE "This is a nice day"
 int main(int argc, char const *argv[])
 {
@@ -13,5 +13,6 @@ int main(int argc, char const *argv[])
 	char* addr;
 	addr = mmap(NULL, buf.st_size, PROT_WRITE, MAP_SHARED, fd, 0);
 	memcpy(addr, MAGIC_PHRASE, strlen(MAGIC_PHRASE));
+	sync();
 	return 0;
 }
