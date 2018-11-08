@@ -1,0 +1,2 @@
+Printf writes to stdout which is line buffered(common). So when the \n occured or buffer is full -> we will see something in the output.
+Also we can use fflash(stdout) to print from buffer right now.
