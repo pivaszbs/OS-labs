@@ -18,7 +18,7 @@ int compare(int* a, int* b, int m)
 {
 	for (int i = 0; i < m; ++i)
 	{
-		if (a[i]<b[i])
+		if (a[i]>b[i])
 			return FALSE;
 	}
 	return TRUE;
@@ -52,7 +52,7 @@ void algo(int* p, int** r, int** c, int* a, int n, int m)
 		{
 			if(compare(r[i],a,m))
 			{
-				add(c[i], a,m);
+				add(a, c[i] ,m);
 				p[i] = TRUE;
 				counter++;
 				dead_counter = 0;
@@ -137,6 +137,10 @@ int main(int argc, char const *argv[])
 		n++;
 	}
 	int* p = malloc(sizeof(int)*n);
+	for (int i = 0; i < n; ++i)
+	{
+		p[i] = FALSE;
+	}
 	algo(p,r,c,a,n,m);
 	free(p);
 	for (int i = 0; i < n; ++i)
